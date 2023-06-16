@@ -52,15 +52,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    function sum(a, b, c) {
-        let theSum = a, b, c;
-        let message = "The sum of " + a + " and " + b +  " is " + theSum + "."
-    }
-    function multiply(a, b, c){     
-        let mFunction = a, b, c;
-        let message2 = "The product of " + a + " and " + b + " is " + mFunction + ".";
-        return [theSum,mFunction,message,message2];
-    }
+    let sum1 = sum(a , b)[0];
+    let sum2 = sum(sum1, c)[0];
+    
+    let multi1 = multiply(a , b)[0];
+    let multi2 = multiply(multi1, c)[0];
+
+    let string1 = a + " and " + b + " and " + c + " sum to " + sum2 + "."
+    let string2 = "The product of " + a + " and " + b + " and " + c + " is " + multi2 + "."
+
+    return [sum2, multi2, string1, string2]
     
 }
 
